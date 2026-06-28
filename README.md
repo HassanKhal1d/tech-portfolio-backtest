@@ -15,7 +15,7 @@ By persisting intermediate state via `.parquet` files at each stage, the archite
 * **Synchronized Acquisition:** Automated pull of adjusted daily OHLCV data via `yfinance`, normalized to a common tz-naive index.
 * **Market Reality Integration:** Implementation of the NYSE trading calendar to distinguish between market closures (e.g., holidays, Hurricane Sandy) and actual data defects.
 * **Tiered Quality Control:** * **Masking Logic:** Distinguishes between fatal errors (e.g., >2 missing OHLCV points) and recoverable data.
-    * **Tiered Recovery:** Automated preservation of partial data via intelligent forward-filling for rows with valid core price information.
+* **Tiered Recovery:** Automated preservation of partial data via intelligent forward-filling for rows with valid core price information.
 * **Integrity Enforcement:** Formal handling of specific anomalies, such as the META pre-IPO window, alongside rigorous checks for duplicate index entries and look-ahead bias at every pipeline stage.
 * **Audit Trail:** Automated logging of data health, masked day counts, and adjustment methodologies.
 
